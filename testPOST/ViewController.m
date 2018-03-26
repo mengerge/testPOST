@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#include "Network.h"
 
 @interface ViewController ()
 
@@ -17,13 +18,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [self postwork];
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
+-(void)postwork{
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:@"home",@"action", nil];
+        
+        NSData *data = [Network postNetWorkURL:@"" andDictionary:dict];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (data == nil) {
+                
+            }else{
+                
+                NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+                
+                NSLog(@"dic:%@",dic);
+            }
+            
+        });
+    });
+    
+    
+}
 
 @end

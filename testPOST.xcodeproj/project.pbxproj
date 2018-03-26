@@ -14,6 +14,7 @@
 		C43433CD2068E2F00019B752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C43433CC2068E2F00019B752 /* Assets.xcassets */; };
 		C43433D02068E2F00019B752 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43433CE2068E2F00019B752 /* LaunchScreen.storyboard */; };
 		C43433D32068E2F00019B752 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C43433D22068E2F00019B752 /* main.m */; };
+		C43433DD2068E5340019B752 /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = C43433DC2068E5340019B752 /* Network.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		C43433CF2068E2F00019B752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C43433D12068E2F00019B752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C43433D22068E2F00019B752 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C43433DB2068E5340019B752 /* Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
+		C43433DC2068E5340019B752 /* Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Network.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 		C43433BF2068E2F00019B752 /* testPOST */ = {
 			isa = PBXGroup;
 			children = (
+				C43433DA2068E5340019B752 /* Network */,
 				C43433C02068E2F00019B752 /* AppDelegate.h */,
 				C43433C12068E2F00019B752 /* AppDelegate.m */,
 				C43433C32068E2F00019B752 /* ViewController.h */,
@@ -72,6 +76,15 @@
 				C43433C92068E2F00019B752 /* testPOST.xcdatamodeld */,
 			);
 			path = testPOST;
+			sourceTree = "<group>";
+		};
+		C43433DA2068E5340019B752 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C43433DB2068E5340019B752 /* Network.h */,
+				C43433DC2068E5340019B752 /* Network.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C43433C52068E2F00019B752 /* ViewController.m in Sources */,
+				C43433DD2068E5340019B752 /* Network.m in Sources */,
 				C43433CB2068E2F00019B752 /* testPOST.xcdatamodeld in Sources */,
 				C43433D32068E2F00019B752 /* main.m in Sources */,
 				C43433C22068E2F00019B752 /* AppDelegate.m in Sources */,
